@@ -6,7 +6,7 @@
  */
 export const insertCard = (card, turn, cardsDivs) => {
   if (!card) throw new Error('card was required');
-  if (!turn) throw new Error('turn was required');
+  if (turn == null) throw new Error('turn was required');
   if (!cardsDivs) throw new Error('cardsDivs was required');
 
   const cardImg = document.createElement('img')
